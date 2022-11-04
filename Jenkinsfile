@@ -1,11 +1,11 @@
-
-node {
-    env {
+env {
         ECR_ID = '884868906286'
         REPOSITORY_NAME = 'test'
         AWS_REGION = 'ap-northeast-2'
         AWS_ECR_CREDENTIAL = 'ecr'
-    }
+}
+
+node {
 
      stage('Clone repository') {
          checkout scm
