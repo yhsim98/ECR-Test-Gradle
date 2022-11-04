@@ -1,4 +1,4 @@
-env {
+params {
         ECR_ID = '884868906286'
         REPOSITORY_NAME = 'test'
         AWS_REGION = 'ap-northeast-2'
