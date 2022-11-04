@@ -4,10 +4,10 @@ node {
          checkout scm
      }
 
-//      stage('build project') {
-//         sh './gradlew clean'
-//         sh './gradlew build'
-//      }
+     stage('build project') {
+        sh './gradlew clean'
+        sh './gradlew build'
+     }
 
      stage('Build image') {
          app = docker.build("884868906286.dkr.ecr.ap-northeast-2.amazonaws.com/test:${env.BUILD_NUMBER}")
