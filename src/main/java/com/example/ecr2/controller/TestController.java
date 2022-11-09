@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.HashMap;
 import java.util.Map;
 
-@RestController("B")
+@RestController
 public class TestController {
 
     @Autowired
@@ -20,7 +20,7 @@ public class TestController {
         return test;
     }
 
-    @GetMapping("/A")
+    @GetMapping("/B/A")
     public Map<String, String> getA() {
         Map<String, String> map = new HashMap<>();
         map.put("getA", aClient.getA());
