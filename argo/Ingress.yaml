@@ -13,17 +13,17 @@ spec:
   rules:
   - http:
        paths:
-          - path: /
+          - path: /B
             pathType: Prefix
             backend:
               service:
                 name: hello-service
                 port:
                   number: 8080
-          - path: /nginx
+          - path: /A
             pathType: Prefix
             backend:
               service:
-                name: ingress-test
+                name: A-service
                 port:
                   number: 80
