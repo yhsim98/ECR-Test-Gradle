@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata: # 3가지 필수 구성요소중 하나
   name: hello-deploy # 해당 이름으로 디플로이 먼트가 생성됨.
+  namespace: hello
   labels:
     app: hello
 spec: # 3가지 필수 구성요서중 하나 specification, 나머지 하나는 status
