@@ -16,7 +16,7 @@ node {
 
      stage('Push image') {
          sh 'rm -f ~/.dockercfg ~/.docker/config.json || true'
-         docker.withRegistry('https://${params.ECR}.dkr.ecr.ap-northeast-2.amazonaws.com', "ecr:ap-northeast-2:${params.CREDENTIAL}") {
+         docker.withRegistry("https://${params.ECR}.dkr.ecr.ap-northeast-2.amazonaws.com", "ecr:ap-northeast-2:${params.CREDENTIAL}") {
              app.push("${env.BUILD_NUMBER}")
              app.push("latest")
      }
