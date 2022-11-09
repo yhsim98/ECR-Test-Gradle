@@ -11,7 +11,7 @@ node {
      }
 
      stage('Build image') {
-         app = docker.build("${params.ECR}.dkr.ecr.ap-northeast-2.amazonaws.com/test:${env.BUILD_NUMBER}")
+         app = docker.build("${params.ECR}.dkr.ecr.ap-northeast-2.amazonaws.com/${ECRNAME}:${env.BUILD_NUMBER}")
      }
 
      stage('Push image') {
