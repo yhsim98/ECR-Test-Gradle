@@ -21,7 +21,7 @@ bootJar {
 ext {
 
     // https://spring.io/projects/spring-cloud 의 Release Trains 부분을 보세요.
-    springCloudVersion = 'Finchley.RELEASE'
+    springCloudVersion = '2021.0.3'
 }
 
 dependencies {
