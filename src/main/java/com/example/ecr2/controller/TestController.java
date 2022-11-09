@@ -13,7 +13,7 @@ public class TestController {
     @Autowired
     private AClient aClient;
 
-    @GetMapping("/")
+    @GetMapping("/B")
     public Map<String, String> test() {
         Map<String, String> test = new HashMap<>();
         test.put("asd", "asd");
