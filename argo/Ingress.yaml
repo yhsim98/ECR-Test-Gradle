@@ -1,0 +1,29 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+
+metadata:
+  name: test-ingress
+  annotations:
+    kubernetes.io/ingress.class: alb
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/target-type: ip
+    alb.ingress.kubernetes.io/subnets: subnet-05e40a92dc5109c25, subnet-0f2dee946cc930cb7
+
+spec:
+  rules:
+  - http:
+       paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: hello-service
+                port:
+                  number: 8080
+          - path: /nginx
+            pathType: Prefix
+            backend:
+              service:
+                name: ingress-test
+                port:
+                  number: 80
