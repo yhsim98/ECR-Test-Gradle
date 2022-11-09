@@ -6,7 +6,7 @@ metadata: # 3가지 필수 구성요소중 하나
   labels:
     app: hello
 spec: # 3가지 필수 구성요서중 하나 specification, 나머지 하나는 status
-  replicas: 2 # 3개의 리플리카 pod를 생성한다.
+  replicas: 1 # 3개의 리플리카 pod를 생성한다.
   selector: # 디플로이먼트가 관리할 파드를 찾는 방법을 정의, matchLabels이 nginx인 파드를 디플로이먼트가 관리한다.
     matchLabels:
       app: hello
